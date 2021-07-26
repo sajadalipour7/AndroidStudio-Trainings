@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.instagramclone">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 
     <application
         android:name=".App"
@@ -10,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InstagramClone">
-        <activity android:name=".SocialMediaActivity"></activity>
+        <activity android:name=".SocialMediaActivity"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
