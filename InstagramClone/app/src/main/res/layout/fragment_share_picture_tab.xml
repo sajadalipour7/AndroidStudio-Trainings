@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SharePictureTab">
 
 
+    <ImageView
+        android:id="@+id/imgShare"
+        android:layout_width="0dp"
+        android:layout_height="365dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="58dp"
+        android:src="@drawable/gaboor_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/edtCaption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Caption"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgShare" />
+
+    <Button
+        android:id="@+id/btnShareImg"
+        android:layout_width="184dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="137dp"
+        android:backgroundTint="#3F76D6"
+        android:text="Share Image"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCaption" />
 </androidx.constraintlayout.widget.ConstraintLayout>
