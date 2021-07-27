@@ -1,5 +1,7 @@
 package com.example.instagramclone;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -126,7 +128,26 @@ public class UsersTab extends Fragment implements AdapterView.OnItemClickListene
             @Override
             public void done(ParseUser user, ParseException e) {
                 if(user!=null && e==null){
-                    FancyToast.makeText(getContext(),user.get("profileProfession").toString(),FancyToast.LENGTH_LONG,FancyToast.INFO,false).show();
+                    try {
+                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+                        alertDialog.setTitle(user.getUsername() + "'s Info")
+                                .setMessage("Bio : " + user.get("profileBio") + "\n"
+                                        + "Profession : " + user.get("profileProfession") + "\n"
+                                        + "Hobbies : " + user.get("profileHobbies") + "\n"
+                                        + "Favorite Sports : " + user.get("profileFavSport"))
+                                .setIcon(R.drawable.person)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    }
+                                });
+
+                        AlertDialog alertShow = alertDialog.create();
+                        alertDialog.show();
+                    }catch (Exception ee){
+                        FancyToast.makeText(getContext(),ee.getMessage(),FancyToast.LENGTH_SHORT,FancyToast.INFO,false).show();
+                    }
 //                    PrettyDialog prettyDialog=new PrettyDialog(getContext());
 //                    prettyDialog.setTitle(user.getUsername()+"'s Info")
 //                        .setMessage(user.get("profileBio")+"\n"
@@ -144,6 +165,8 @@ public class UsersTab extends Fragment implements AdapterView.OnItemClickListene
 //                                    }
 //                                }).show();
 
+                }else{
+                    FancyToast.makeText(getContext(),e.getMessage(),FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
                 }
             }
         });
