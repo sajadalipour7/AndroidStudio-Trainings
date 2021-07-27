@@ -9,85 +9,97 @@
 
     <EditText
         android:id="@+id/edtProfileName"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="22dp"
+
         android:ems="10"
         android:hint="Profile name"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edtBio"
+        app:layout_constraintEnd_toEndOf="@id/guideline13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline12"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtBio"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="22dp"
         android:ems="10"
         android:hint="Biography"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edtProfession"
+        app:layout_constraintEnd_toEndOf="@id/guideline13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/edtProfileName" />
 
     <EditText
         android:id="@+id/edtProfession"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="22dp"
+
         android:ems="10"
         android:hint="Profession"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edtHobbies"
+        app:layout_constraintEnd_toEndOf="@id/guideline13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/edtBio" />
 
     <EditText
         android:id="@+id/edtHobbies"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="22dp"
+
         android:ems="10"
         android:hint="Hobbies"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edtFavSport"
+        app:layout_constraintEnd_toEndOf="@id/guideline13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/edtProfession" />
 
     <EditText
         android:id="@+id/edtFavSport"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="22dp"
+
         android:ems="10"
         android:hint="Favorite Sport"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpdateInfo"
+        app:layout_constraintEnd_toEndOf="@id/guideline13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/edtHobbies" />
 
     <Button
         android:id="@+id/btnUpdateInfo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="159dp"
         android:backgroundTint="#3F76D6"
         android:text="update info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtFavSport" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFavSport"
+        app:layout_constraintStart_toStartOf="@id/guideline12"
+        app:layout_constraintEnd_toEndOf="@id/guideline13"
+         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -173,7 +173,7 @@ public class SharePictureTab extends Fragment implements View.OnClickListener{
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==2000){
-            if(resultCode==Activity.RESULT_OK){
+            if(resultCode==Activity.RESULT_OK && data!=null){
                 try{
                     Uri selectedImage=data.getData();
                     String[] filePathColumn={MediaStore.Images.Media.DATA};
@@ -183,9 +183,13 @@ public class SharePictureTab extends Fragment implements View.OnClickListener{
                     String picturePath=cursor.getString(columnIndex);
                     cursor.close();
                     receivedImageBitmap= BitmapFactory.decodeFile(picturePath);
+//                    Bitmap betterSi=Bitmap.createScaledBitmap(receivedImageBitmap,240,200,true);
+//                    imgShare.setScaleType(ImageView.ScaleType.FIT_CENTER);
                     imgShare.setImageBitmap(receivedImageBitmap);
 
+
                 }catch (Exception e){
+                    FancyToast.makeText(getContext(),e.getMessage(),FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
                     e.printStackTrace();
                 }
             }

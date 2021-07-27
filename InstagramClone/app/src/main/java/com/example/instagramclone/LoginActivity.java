@@ -66,6 +66,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     if (user != null && e == null) {
                                         FancyToast.makeText(getApplicationContext(), user.getUsername() + " is Logged in", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, false).show();
                                         transitionToSocialMediaActivity();
+                                    }else{
+                                        FancyToast.makeText(getApplicationContext(),e.getMessage(),FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
+
                                     }
                                 }
                             });

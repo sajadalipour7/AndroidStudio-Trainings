@@ -10,71 +10,82 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="154dp"
-        android:layout_height="126dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="129dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtLoginEmail"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline10"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
         app:srcCompat="@drawable/gaboor_small" />
 
     <EditText
         android:id="@+id/edtLoginEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="101dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Username"
         android:inputType="textEmailAddress"
         android:textColorHint="#673AB7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edtLoginPassword"
+        app:layout_constraintEnd_toEndOf="@id/guideline11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline10"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
         android:id="@+id/edtLoginPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="100dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:textColorHint="#673AB7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginLog"
+        app:layout_constraintEnd_toEndOf="@id/guideline11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline10"
         app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail" />
 
     <Button
         android:id="@+id/btnLoginLog"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="162dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:backgroundTint="#2B8159"
         android:text="LOG IN"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignUpLog"
+        app:layout_constraintEnd_toEndOf="@id/guideline11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline10"
         app:layout_constraintTop_toBottomOf="@+id/edtLoginPassword" />
 
     <Button
         android:id="@+id/btnSignUpLog"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="131dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:backgroundTint="#8F4545"
         android:text="SIGN UP"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline10"
         app:layout_constraintTop_toBottomOf="@+id/btnLoginLog" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
 </androidx.constraintlayout.widget.ConstraintLayout>
